@@ -1,4 +1,4 @@
-import type { NodeCategory } from '@tracereactive/types';
+import type { NodeCategory } from '@gravitydock/types';
 
 export const DescriptiveCategory: NodeCategory = { name: 'Descriptive', accent: 'blue-500' };
 export const InferentialCategory: NodeCategory = { name: 'Inferential', accent: 'purple-500' };

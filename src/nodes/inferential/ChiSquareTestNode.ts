@@ -1,4 +1,4 @@
-import { BaseNode } from '@tracereactive/types';
+import { BaseNode } from '@gravitydock/types';
 import { InferentialCategory } from '../../categories';
 import * as aq from 'arquero';
 import { jStat } from 'jstat';

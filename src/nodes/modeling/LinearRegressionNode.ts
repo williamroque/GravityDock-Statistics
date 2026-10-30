@@ -1,4 +1,4 @@
-import { BaseNode } from '@tracereactive/types';
+import { BaseNode } from '@gravitydock/types';
 import { ModelingCategory } from '../../categories';
 import * as aq from 'arquero';
 import { MultivariateLinearRegression as MLR } from 'ml-regression';

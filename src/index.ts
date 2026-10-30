@@ -1,4 +1,4 @@
-import type { TraceReactiveAPI } from '@tracereactive/types';
+import type { GravityDockAPI } from '@gravitydock/types';
 import * as aq from 'arquero';
 
 import { DescribeExtendedNode } from './nodes/descriptive/DescribeExtendedNode';
@@ -24,7 +24,7 @@ import { SampleDistributionNode } from './nodes/distributions/SampleDistribution
 import { FitDistributionNode } from './nodes/distributions/FitDistributionNode';
 import { ProbabilityCalculatorNode } from './nodes/distributions/ProbabilityCalculatorNode';
 
-declare const traceReactive: TraceReactiveAPI;
+declare const gravityDock: GravityDockAPI;
 
 const nodes: any[] = [
     new DescribeExtendedNode(),
@@ -64,9 +64,9 @@ const serializableNodes = nodes.map(n => ({
     dynamicOutputs: n.dynamicOutputs
 }));
 
-traceReactive.registerNodes(serializableNodes);
+gravityDock.registerNodes(serializableNodes);
 
-traceReactive.onEvaluateNode(async ({ typeId, inputs, properties }: any) => {
+gravityDock.onEvaluateNode(async ({ typeId, inputs, properties }: any) => {
     const node = nodes.find(n => n.typeId === typeId);
     if (!node) {
         throw new Error(`Unknown node type: ${typeId}`);
